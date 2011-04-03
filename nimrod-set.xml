@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<!-- <PropertyList include="nimrod-jsbsim-cnf.xml"> -->
+<PropertyList include="nimrod-yasim-cnf.xml">
+
+  <sim>
+    <description>Hawker Siddeley Nimrod</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+  </sim>
+
+</PropertyList>
+

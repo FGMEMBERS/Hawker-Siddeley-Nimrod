@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<PropertyList include="nimrod-base.xml">
+
+  <sim>
+
+    <description>Hawker Siddeley Nimrod (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">nimrod-yasim</aero>
+
+  </sim>
+
+</PropertyList>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel1</object-name>
+    <object-name>panel2</object-name>
+    <object-name>panel3</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m> -0.340 </y-m>
+      <z-m>  0.090 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.220 </x-m>
+      <y-m> 0.340 </y-m>
+      <z-m> 0.090 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.218 </x-m>
+      <y-m> -0.419 </y-m>
+      <z-m>  0.087 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> 0.218 </x-m>
+      <y-m> 0.258 </y-m>
+      <z-m> 0.087 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.218 </x-m>
+      <y-m> -0.258 </y-m>
+      <z-m>  0.087 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> 0.218 </x-m>
+      <y-m> 0.419 </y-m>
+      <z-m> 0.087 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ADF -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/adf/rmi.xml</path>
+    <offsets>
+      <x-m>  0.218 </x-m>
+      <y-m> -0.340 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/adf/rmi.xml</path>
+    <offsets>
+      <x-m> 0.218 </x-m>
+      <y-m> 0.340 </y-m>
+      <z-m> 0.000 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+
