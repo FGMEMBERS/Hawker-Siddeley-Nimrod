@@ -12,13 +12,163 @@
 
     <!-- Objets transparents -->
   </animation>
+  
+  <!-- Yoke -->
+  <!-- Quadrant -->
+  <!--
+  <model>
+    <path>Aircraft/Instruments-3d/quadrant/quadrant.xml</path>
+    <offsets>
+      <x-m>  0.30 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -0.17 </z-m>
+    </offsets>
+  </model>
+  -->
+
+  <!-- middle dash -->  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/Radar/radar.xml</path>
+    <offsets>
+      <x-m>  0.230 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.010 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/egt/egt.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m> -0.108 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/egt/egt2.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m> -0.058 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/egt/egt3.xml</path>
+    <offsets>
+      <x-m> 0.220 </x-m>
+      <y-m> 0.108 </y-m>
+      <z-m> 0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/egt/egt4.xml</path>
+    <offsets>
+      <x-m> 0.220 </x-m>
+      <y-m> 0.058 </y-m>
+      <z-m> 0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/rpm/rpm-1.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m> -0.108 </y-m>
+      <z-m>  0.100 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/rpm/rpm-2.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m> -0.058 </y-m>
+      <z-m>  0.100 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/rpm/rpm-3.xml</path>
+    <offsets>
+      <x-m> 0.220 </x-m>
+      <y-m> 0.058 </y-m>
+      <z-m> 0.100 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/rpm/rpm-4.xml</path>
+    <offsets>
+      <x-m> 0.220 </x-m>
+      <y-m> 0.108 </y-m>
+      <z-m> 0.100 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/oil/oil-1.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m> -0.108 </y-m>
+      <z-m>  0.145 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/oil/oil-2.xml</path>
+    <offsets>
+      <x-m>  0.220 </x-m>
+      <y-m> -0.058 </y-m>
+      <z-m>  0.145 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/oil/oil-3.xml</path>
+    <offsets>
+      <x-m> 0.220 </x-m>
+      <y-m> 0.108 </y-m>
+      <z-m> 0.145 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/oil/oil-4.xml</path>
+    <offsets>
+      <x-m> 0.220 </x-m>
+      <y-m> 0.058 </y-m>
+      <z-m> 0.145 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Switch Landing Light -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m>  0.219 </x-m>
+      <y-m> -0.450 </y-m>
+      <z-m>  0.155 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m> 0.219 </x-m>
+      <y-m> 0.450 </y-m>
+      <z-m> 0.155 </z-m>
+    </offsets>
+  </model>
 
   <!-- AI -->
   <model>
     <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/ai/ai.xml</path>
     <offsets>
-      <x-m>  0.220 </x-m>
-      <y-m> -0.340 </y-m>
+      <x-m>  0.218 </x-m>
+      <y-m> -0.346 </y-m>
       <z-m>  0.090 </z-m>
     </offsets>
   </model>
@@ -26,18 +176,18 @@
   <model>
     <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/ai/ai.xml</path>
     <offsets>
-      <x-m> 0.220 </x-m>
-      <y-m> 0.340 </y-m>
+      <x-m> 0.218 </x-m>
+      <y-m> 0.346 </y-m>
       <z-m> 0.090 </z-m>
     </offsets>
   </model>
-
+  
   <!-- ASI -->
   <model>
     <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
       <x-m>  0.218 </x-m>
-      <y-m> -0.419 </y-m>
+      <y-m> -0.423 </y-m>
       <z-m>  0.087 </z-m>
     </offsets>
   </model>
@@ -46,8 +196,27 @@
     <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
       <x-m> 0.218 </x-m>
-      <y-m> 0.258 </y-m>
+      <y-m> 0.269 </y-m>
       <z-m> 0.087 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- mach -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/mach/mach.xml</path>
+    <offsets>
+      <x-m>  0.218 </x-m>
+      <y-m> -0.423 </y-m>
+      <z-m>  0.010 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/mach/mach.xml</path>
+    <offsets>
+      <x-m> 0.218 </x-m>
+      <y-m> 0.423 </y-m>
+      <z-m> 0.010 </z-m>
     </offsets>
   </model>
 
@@ -56,7 +225,7 @@
     <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
       <x-m>  0.218 </x-m>
-      <y-m> -0.258 </y-m>
+      <y-m> -0.269 </y-m>
       <z-m>  0.087 </z-m>
     </offsets>
   </model>
@@ -65,8 +234,65 @@
     <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
       <x-m> 0.218 </x-m>
-      <y-m> 0.419 </y-m>
+      <y-m> 0.423 </y-m>
       <z-m> 0.087 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- radar alt -->
+   <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/ralt/ralt.xml</path>
+    <offsets>
+      <x-m>  0.218 </x-m>
+      <y-m> -0.200 </y-m>
+      <z-m>  0.087 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/ralt/ralt.xml</path>
+    <offsets>
+      <x-m> 0.218 </x-m>
+      <y-m> 0.200 </y-m>
+      <z-m> 0.087 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ILS -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/ki206/ki206.xml</path>
+      <offsets>
+      <x-m>  0.218 </x-m>
+      <y-m> -0.269 </y-m>
+      <z-m> -0.065 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/ki206/ki206.xml</path>
+      <offsets>
+      <x-m>  0.218 </x-m>
+      <y-m>  0.269 </y-m>
+      <z-m> -0.065 </z-m>
+    </offsets>
+  </model>
+ 
+  <!-- G meter -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/g/gmeter.xml</path>
+    <offsets>
+      <x-m>  0.222 </x-m>
+      <y-m> -0.248 </y-m>
+      <z-m>  0.142 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/g/gmeter.xml</path>
+    <offsets>
+      <x-m> 0.222</x-m>
+      <y-m> 0.248</y-m>
+      <z-m> 0.142 </z-m>
     </offsets>
   </model>
 
@@ -75,8 +301,8 @@
     <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/adf/rmi.xml</path>
     <offsets>
       <x-m>  0.218 </x-m>
-      <y-m> -0.340 </y-m>
-      <z-m>  0.000 </z-m>
+      <y-m> -0.200 </y-m>
+      <z-m>  0.010 </z-m>
     </offsets>
   </model>
 
@@ -84,10 +310,142 @@
     <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/adf/rmi.xml</path>
     <offsets>
       <x-m> 0.218 </x-m>
-      <y-m> 0.340 </y-m>
-      <z-m> 0.000 </z-m>
+      <y-m> 0.200 </y-m>
+      <z-m> 0.010 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- fuel -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/Fuel/fuel.xml</path>
+    <offsets>
+      <x-m>  0.212 </x-m>
+      <y-m>  0.499 </y-m>
+      <z-m> -0.090 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/Fuel/fuel1.xml</path>
+    <offsets>
+      <x-m>  0.218 </x-m>
+	    <y-m>  0.552 </y-m>
+      <z-m> -0.090 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/Fuel/fuel2.xml</path>
+    <offsets>
+      <x-m>  0.212 </x-m>
+ 	    <y-m>  0.605 </y-m>
+      <z-m> -0.090 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- vor -->
+  <model>
+    <name>vor</name>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/vor/vor.xml</path>
+      <offsets>
+      <x-m>  0.218 </x-m>
+      <y-m> -0.269 </y-m>
+      <z-m> -0.140 </z-m>
+    </offsets>
+  </model>
+ 
+  <!-- radio -->
+  <model>
+    <name>radio</name>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/kma20/kma20.xml</path>
+    <offsets>
+      <x-m>  0.550 </x-m>
+      <y-m> -0.202 </y-m>
+      <z-m>  0.555 </z-m>
+      <roll-deg>    9 </roll-deg>
+      <pitch-deg>  68 </pitch-deg>
+      <heading-deg> 2 </heading-deg>
+    </offsets>
+  </model>
+ 
+  <model>
+    <name>radio</name>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/kma20/kma20.xml</path>
+    <offsets>
+      <x-m> 0.550 </x-m>
+      <y-m> 0.202 </y-m>
+      <z-m> 0.555 </z-m>
+      <roll-deg>    -9 </roll-deg>
+      <pitch-deg>   68 </pitch-deg>
+      <heading-deg> -2 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- winter ball -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/winter-ball/ball.xml</path>
+    <offsets>
+      <x-m>  0.218 </x-m>
+	    <y-m> -0.423 </y-m>
+      <z-m> -0.065 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/winter-ball/ball.xml</path>
+    <offsets>
+      <x-m>  0.218 </x-m>
+	    <y-m>  0.423 </y-m>
+      <z-m> -0.065 </z-m>
     </offsets>
   </model>
 
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.218 </x-m>
+      <y-m> -0.269 </y-m>
+      <z-m>  0.010 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> 0.218 </x-m>
+      <y-m> 0.269 </y-m>
+      <z-m> 0.010 </z-m>
+    </offsets>
+  </model>
+ 
+  <!-- Heading indicator -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/hi/hi.xml</path>
+    <offsets>
+      <x-m>  0.218 </x-m>
+      <y-m> -0.346 </y-m>
+      <z-m>  0.010 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/hi/hi.xml</path>
+    <offsets>
+      <x-m> 0.218 </x-m>
+      <y-m> 0.346 </y-m>
+      <z-m> 0.010 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/standby-adi/adi.xml</path>
+    <offsets>
+      <x-m> 0.208 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.090 </z-m>
+    </offsets>
+  </model>
+  
 </PropertyList>
 
