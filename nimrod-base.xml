@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Hawker-Siddeley-Nimrod/nimrod-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Hawker-Siddeley-Nimrod/Sounds/nimrod-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Hawker-Siddeley-Nimrod/Models/nimrod.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int">  0 </int>  <!-- 0 immat -->
+        <int type="int">  0 </int>  <!-- 1 immat -->
+        <int type="int">  0 </int>  <!-- 2 immat -->
+        <int type="int">  0 </int>  <!-- 3 immat -->
+        <int type="int">  0 </int>  <!-- 4 immat -->
+        <int type="int">  0 </int>  <!-- 5 immat -->
+        <int type="bool"> 0 </int>  <!-- 6 smoke -->
+        <int type="int">  0 </int>  <!-- 7 color -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+      </generic>
+    </multiplay>
+
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.25 </setting>
+      <setting> 0.50 </setting>
+      <setting> 0.75 </setting>
+      <setting> 1.00 </setting>
+    </flaps>
+
+    <help>
+      <title>nimrod</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close door</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/nimrod-menu.xml"/>
+
+  </sim>
+ 
+  <input>
+    <keyboard include="Nasal/nimrod-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/doors.nas</file>
+    </doors>
+    <nimrod>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/light.nas</file>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/liveries.nas</file>
+<!--  <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/immat.nas</file> -->
+    </nimrod>
+  </nasal>
+   
+</PropertyList>
