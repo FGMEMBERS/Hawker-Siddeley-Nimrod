@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+ <sim include="Nasal/views.xml">
+ 
+   <description>Hawker Siddeley Nimrod (Rembrandt)(YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">nimrod-yasim</aero>
+	
+	 <aircraft-version>1.0</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Hawker-Siddeley-Nimrod/nimrod-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Hawker-Siddeley-Nimrod/Sounds/nimrod-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Hawker-Siddeley-Nimrod/Models/Nimrod-MR2.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <systems>
+      <electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+      <autopilot>
+        <path>Aircraft/Hawker-Siddeley-Nimrod/Systems/autopilot3.xml</path>
+      </autopilot>
+      <refuel>
+        <type>probe</type>
+        <serviceable type="bool">true</serviceable>
+      </refuel>
+    </systems> 
+	
+    <ai>
+      <scenario>refueling_demo_2</scenario>
+    </ai>
+	
+    <mp-systems>
+      <radar-enabled type="bool">true</radar-enabled>
+      <ecm-rwr-enabled type="bool">true</ecm-rwr-enabled>
+      <combat-enabled type="bool">true</combat-enabled>
+    </mp-systems>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                      <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                      <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                      <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
+        <int type="bool" n="6"> 0 </int>                                      <!-- 6 smoke -->
+        <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
+        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 11 altitude for MP shadow -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
+      </generic>
+    </multiplay>
+
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.25 </setting>
+      <setting> 0.50 </setting>
+      <setting> 0.75 </setting>
+      <setting> 1.00 </setting>
+    </flaps>
+
+	  <aoa-indexer>
+      <too-slow-deg>13.5</too-slow-deg>  <!-- target +1.5 deg -->
+      <slow-deg>12.5</slow-deg>          <!-- target +0.5 deg -->         
+      <fast-deg>11.5</fast-deg>          <!-- target -0.5 deg -->         
+      <too-fast-deg>10.5</too-fast-deg>  <!-- target -1.5 deg -->         
+    </aoa-indexer>
+	
+	
+    <help>
+      <title>nimrod</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close door</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/nimrod-menu.xml"/>
+  </sim>
+  
+  <systems>
+    <refuel>
+      <type>probe</type>
+      <serviceable type="bool">true</serviceable>
+    </refuel>
+  </systems> 
+  
+  <autopilot>
+    <settings>
+      <target-agl-ft type="float">200</target-agl-ft>
+      <target-altitude-ft type="float">3000</target-altitude-ft>
+      <target-pitch-deg type="float">0</target-pitch-deg>
+      <target-aoa-deg type="float">0</target-aoa-deg>
+      <target-roll-deg type="float">0</target-roll-deg>
+      <target-climb-rate-fps type="float">0</target-climb-rate-fps>
+      <ground-roll-heading-deg type="float">-999.9</ground-roll-heading-deg>
+      <target-speed-kt type="float">350.0</target-speed-kt>
+      <target-mach type="float">0.86</target-mach>
+      <approach-aoa-deg type="float">12.0</approach-aoa-deg>
+      <rotate-speed-kt type="float">110.0</rotate-speed-kt>
+      <rotate-deg type="float">13.0</rotate-deg>
+    </settings>
+    <locks>
+      <pitch type="string">initialised</pitch>
+      <roll type="string">initialised</roll>
+      <altitude type="string">initialised</altitude>
+      <heading type="string">initialised</heading>
+      <auto-takeoff type="string">enabled</auto-takeoff>
+      <auto-landing type="string">enabled</auto-landing>
+      <rudder type="string">initialised</rudder>
+      <aoa type="string">initialised</aoa>
+    </locks>
+  </autopilot>  
+  
+  <controls>
+    <!-- Start with the Parking Brake on -->
+    <gear>
+      <brake-parking type="double">1.0</brake-parking>
+    </gear>
+  </controls>
+ 
+  <environment>
+    <turbulence>
+      <use-cloud-turbulence>true</use-cloud-turbulence>
+    </turbulence>
+  </environment>
+
+  <instrumentation>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Systems/instrumentation.xml</path>
+    <rwr>
+      <display-lighting-intens type="double">0.4</display-lighting-intens>
+      <symbology-lighting-intens type="double">1</symbology-lighting-intens>
+    </rwr>
+    <enav><selected type="int">3</selected></enav>
+    <radar>
+      <range type="int" archive="y">40</range>
+      <range-factor type="double" archive="n">0.001888</range-factor>
+      <minimized type="bool" archive="y">false</minimized>
+      <selected type="int">3</selected>
+      <!-- inicio en pruebas -->
+      <enabled type="bool">true</enabled>
+      <az-field type="double">120</az-field>
+      <range type="double">150</range>
+      <range-selected type="double">50</range-selected>
+      <radar2-range type="double">150</radar2-range>
+      <display-rdr type="bool">true</display-rdr>
+      <radar-standby type="int">3</radar-standby>
+      <mode>
+        <rws type="bool">true</rws>
+        <tws-auto type="bool">false</tws-auto>
+      </mode>
+    </radar> 
+  </instrumentation>
+  
+  <input>
+    <keyboard include="Nasal/nimrod-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/doors.nas</file>
+    </doors>
+    <nimrod>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/light.nas</file>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/liveries.nas</file>
+<!--  <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/immat.nas</file> -->
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/dropview.nas</file>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/trajectory-markers.nas</file>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/auto-takeoff.nas</file>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/auto-landing.nas</file>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/altitude-hold-monitor.nas</file>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/heading-hold-monitor.nas</file>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/yaw-monitor.nas</file>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/tfa.nas</file>
+    </nimrod>
+    <aar>
+      <file>Aircraft/Generic/aar.nas</file>
+    </aar>
+    <rwr>
+      <!-- <file>Aircraft/Instruments-3d/rwr/rwr.nas</file> -->
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/rwr/rwr.nas</file>
+    </rwr>
+    <!-- <radardist>
+      <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+    </radardist> -->
+    <radar>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/Instruments/Radar/radar.nas</file> 
+    </radar>
+    <enav>
+      <file>Aircraft/Hawker-Siddeley-Nimrod/Nasal/enav.nas</file>
+    </enav>	
+  </nasal>
+
+</PropertyList>
+

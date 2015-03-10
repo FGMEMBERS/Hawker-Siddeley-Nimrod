@@ -3,78 +3,537 @@
 <PropertyList>
 
   <fx>
+  <engine>
+      <name>engine-start-inside</name>
+      <mode>once</mode>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/turbine_start_in.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[0]/starter</property>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.03 </min>
+        <max> 0.07 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
+      </pitch>
+       <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+   </engine>
+   
+   <engine>
+      <name>engine-start-inside1</name>
+      <mode>once</mode>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/turbine_start_in.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[0]/starter</property>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.03 </min>
+        <max> 0.07 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
+      </pitch>
+       <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+   </engine>
 
+  
+  <engine>
+      <name>engine-start-inside2</name>
+      <mode>once</mode>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/turbine_start_in.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[0]/starter</property>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[2]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.03 </min>
+        <max> 0.07 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[2]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
+      </pitch>
+       <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+   </engine>
+   
+   <engine>
+      <name>engine-start-inside3</name>
+      <mode>once</mode>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/turbine_start_in.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[0]/starter</property>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[3]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.03 </min>
+        <max> 0.07 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[3]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
+      </pitch>
+       <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+   </engine>
+   
+   
     <engine>
-      <name>engine</name>
-      <path>Sounds/jet.wav</path>
+      <name>whine-int</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/f16-engine-int.wav</path>
       <mode>looped</mode>
       <condition>
         <property>/engines/engine[0]/running</property>
+		<not>
+        	<property>/sim/current-view/external</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
       </condition>
       <volume>
-        <property>/engines/engine[0]/prop-thrust</property>
-        <factor type="double">0.0001</factor>
+        <property>/engines/engine[0]/n2</property>
+        <factor type="double">0.0025</factor>
       </volume>
       <pitch>
-        <property>/engines/engine[0]/n1</property>
+        <property>/engines/engine[0]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+	
+	 <engine>
+      <name>whine-int1</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/f16-engine-int.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>/engines/engine[1]/running</property>
+		<not>
+        	<property>/sim/current-view/external</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+	
+	
+	 <engine>
+      <name>whine-int2</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/f16-engine-int.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>/engines/engine[2]/running</property>
+		<not>
+        	<property>/sim/current-view/external</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[2]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[2]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+	
+	
+	 <engine>
+      <name>whine-int3</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/f16-engine-int.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>/engines/engine[3]/running</property>
+		<not>
+        	<property>/sim/current-view/external</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[3]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[3]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+   
+  
+
+     <engine>
+      <name>engine-start-outside0</name>
+      <mode>once</mode>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/spey-startup.wav</path>
+      <condition>
+<and>
+ 
+<greater-than>  
+   <property>/engines/engine[0]/rpm</property>
+   <value>0.5</value>
+   
+  </greater-than>
+  <less-than>
+                <property>velocities/groundspeed-kt</property>
+                <value>1</value>
+            </less-than>
+  <not>
+   <property>/sim/current-view/internal</property>
+  </not>
+</and>
+</condition>
+
+      <volume>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+	<min> 0.0 </min>
+	<max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+	
+	  <engine>
+      <name>engine-start-outside1</name>
+      <mode>once</mode>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/spey-startup.wav</path>
+      <condition>
+<and>
+ 
+<greater-than>  
+   <property>/engines/engine[1]/rpm</property>
+   <value>0.5</value>
+   
+  </greater-than>
+  <less-than>
+                <property>velocities/groundspeed-kt</property>
+                <value>1</value>
+            </less-than>
+  <not>
+   <property>/sim/current-view/internal</property>
+  </not>
+</and>
+</condition>
+
+      <volume>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.01 </factor>
+	<min> 0.0 </min>
+	<max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+	
+	  <engine>
+      <name>engine-start-outside2</name>
+      <mode>once</mode>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/spey-startup.wav</path>
+      <condition>
+<and>
+ 
+<greater-than>  
+   <property>/engines/engine[2]/rpm</property>
+   <value>0.5</value>
+   
+  </greater-than>
+  <less-than>
+                <property>velocities/groundspeed-kt</property>
+                <value>1</value>
+            </less-than>
+  <not>
+   <property>/sim/current-view/internal</property>
+  </not>
+</and>
+</condition>
+
+      <volume>
+        <property>engines/engine[2]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[2]/n2</property>
+        <factor> 0.01 </factor>
+	<min> 0.0 </min>
+	<max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+	
+	
+	  <engine>
+      <name>engine-start-outside3</name>
+      <mode>once</mode>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/spey-startup.wav</path>
+      <condition>
+<and>
+ 
+<greater-than>  
+   <property>/engines/engine[3]/rpm</property>
+   <value>0.5</value>
+   
+  </greater-than>
+  <less-than>
+                <property>velocities/groundspeed-kt</property>
+                <value>1</value>
+            </less-than>
+  <not>
+   <property>/sim/current-view/internal</property>
+  </not>
+</and>
+</condition>
+
+      <volume>
+        <property>engines/engine[3]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[3]/n2</property>
+        <factor> 0.01 </factor>
+	<min> 0.0 </min>
+	<max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+	
+	
+	 <engine>
+      <name>whine0</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/spey-engine.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>/engines/engine[0]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+	
+	<engine>
+      <name>whine1</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/spey-engine.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>/engines/engine[1]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+
+<engine>
+      <name>whine2</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/spey-engine.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>/engines/engine[2]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[2]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[2]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+	
+	
+	<engine>
+      <name>whine0</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/spey-engine.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>/engines/engine[3]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[3]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[3]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+	
+	
+	 <engine>
+      <name>engine</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/jet-blast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[0]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/prop-thrust</property>
+        <factor type="double">0.00013</factor>
+      </volume>
+       <pitch>
+        <property>engines/engine[0]/n1</property>
+        <factor>0.2</factor>
+      </pitch>
+    </engine>
+	
+	<engine>
+      <name>engine1</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/jet-blast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[1]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/prop-thrust</property>
+        <factor type="double">0.00013</factor>
+      </volume>
+       <pitch>
+        <property>engines/engine[0]/n1</property>
         <factor>0.2</factor>
       </pitch>
     </engine>
 
-    <engine>
-      <name>whine</name>
-      <path>Sounds/whine.wav</path>
+	<engine>
+      <name>engine2</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/jet-blast.wav</path>
       <mode>looped</mode>
       <condition>
-        <property>/engines/engine[0]/running</property>
+        <property>engines/engine[2]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
       </condition>
       <volume>
-        <property>/engines/engine[0]/n2</property>
-        <factor>0.010</factor>
-        <max>1.0</max>
+        <property>engines/engine[2]/prop-thrust</property>
+        <factor type="double">0.00013</factor>
       </volume>
-      <pitch>
-        <property>/engines/engine[0]/n2</property>
-        <factor>0.01</factor>
-        <offset>0.15</offset>
-      </pitch>
-    </engine>
-
-    <engine>
-      <name>engine</name>
-      <path>Sounds/jet.wav</path>
-      <mode>looped</mode>
-      <condition>
-        <property>/engines/engine[1]/running</property>
-      </condition>
-      <volume>
-        <property>/engines/engine[1]/prop-thrust</property>
-        <factor type="double">0.0001</factor>
-      </volume>
-      <pitch>
-        <property>/engines/engine[1]/n1</property>
+       <pitch>
+        <property>engines/engine[0]/n1</property>
         <factor>0.2</factor>
       </pitch>
     </engine>
 
-    <engine>
-      <name>whine</name>
-      <path>Sounds/whine.wav</path>
+	
+	<engine>
+      <name>engine3</name>
+      <path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/jet-blast.wav</path>
       <mode>looped</mode>
       <condition>
-        <property>/engines/engine[1]/running</property>
+        <property>engines/engine[3]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
       </condition>
       <volume>
-        <property>/engines/engine[1]/n2</property>
-        <factor>0.010</factor>
-        <max>1.0</max>
+        <property>engines/engine[3]/prop-thrust</property>
+        <factor type="double">0.00013</factor>
       </volume>
-      <pitch>
-        <property>/engines/engine[1]/n2</property>
-        <factor>0.01</factor>
-        <offset>0.15</offset>
+       <pitch>
+        <property>engines/engine[0]/n1</property>
+        <factor>0.2</factor>
       </pitch>
     </engine>
+
+	
+   
 
     <rumble>
       <name>rumble</name>
@@ -380,14 +839,89 @@
     </wind>
 
     <stall>
-      <name>stall</name>
-      <path>Sounds/stall.wav</path>
-      <property>/sim/alarms/stall-warning</property>
-      <volume>
-        <property>/velocities/airspeed-kt</property>
-        <min>90.0</min>
-      </volume>
+        <name>stall</name>
+        <mode>looped</mode>
+        <path>/Aircraft/Hawker-Siddeley-Nimrod/Sounds/stall.wav</path>
+        <condition>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>140</value>
+            </less-than>
+            <not>
+                <property>/gear/gear[0]/wow</property>
+                <property>/gear/gear[1]/wow</property>
+                <property>/gear/gear[2]/wow</property>
+                <property>/surface-positions/flap-pos-norm</property>
+                <property>/gear/gear[0]/position-norm</property>
+            </not>
+        </condition>
+        <volume>
+            <max>0.5</max>
+        </volume>
+        <position>
+            <x>-23</x>
+            <y>0</y>
+            <z>1</z>
+        </position>
+        <reference-dist>1.0</reference-dist>
+        <max-dist>2.0</max-dist>
     </stall>
+
+    <stall>
+        <name>stall</name>
+        <mode>looped</mode>
+        <path>/Aircraft/Hawker-Siddeley-Nimrod/Sounds/stall.wav</path>
+        <condition>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>135</value>
+            </less-than>
+            <not>
+                <property>/gear/gear[0]/wow</property>
+                <property>/gear/gear[1]/wow</property>
+                <property>/gear/gear[2]/wow</property>
+                <property>/gear/gear[0]/position-norm</property>
+            </not>
+        </condition>
+        <volume>
+            <max>0.5</max>
+        </volume>
+        <position>
+            <x>-22</x>
+            <y>0</y>
+            <z>0</z>
+        </position>
+        <reference-dist>1.0</reference-dist>
+        <max-dist>2.0</max-dist>
+    </stall>
+
+    <stall>
+        <name>stall</name>
+        <mode>looped</mode>
+        <path>/Aircraft/Hawker-Siddeley-Nimrod/Sounds/stall.wav</path>
+        <condition>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>125</value>
+            </less-than>
+            <not>
+                <property>/gear/gear[0]/wow</property>
+                <property>/gear/gear[1]/wow</property>
+                <property>/gear/gear[2]/wow</property>
+                <property>/surface-positions/flap-pos-norm</property>
+            </not>
+        </condition>
+        <volume>
+            <max>0.5</max>
+        </volume>
+        <position>
+            <x>-22</x>
+            <y>0</y>
+            <z>0</z>
+        </position>
+        <reference-dist>1.0</reference-dist>
+        <max-dist>2.0</max-dist>
+    </stall>		
   </fx>
 
 </PropertyList>

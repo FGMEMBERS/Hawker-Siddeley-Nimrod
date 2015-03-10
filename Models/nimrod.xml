@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
+<!-- rembrandt version -->
   <path>nimrod.ac</path>
 
+  <!-- MP sound call -->
+  <sound><path>Aircraft/Hawker-Siddeley-Nimrod/Sounds/mp-sound.xml</path></sound>
+  
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Hawker-Siddeley-Nimrod/Models/Liveries", 10);
@@ -27,46 +30,9 @@
     </unload>
   </nasal>
 
-  <animation>
-    <!-- Objets opaques -->
-    <object-name>fuselage</object-name>
-    <object-name>porteAG</object-name>
-    <object-name>porteAD</object-name>
-    <object-name>antennes</object-name>
-    <object-name>ailes</object-name>
-    <object-name>aileronG</object-name>
-    <object-name>aileronD</object-name>
-    <object-name>voletG1</object-name>
-    <object-name>voletG2</object-name>
-    <object-name>voletD1</object-name>
-    <object-name>voletD2</object-name>
-    <object-name>porteG1</object-name>
-    <object-name>porteG2</object-name>
-    <object-name>porteD1</object-name>
-    <object-name>porteD2</object-name>
-    <object-name>ailes2</object-name>
-    <object-name>ailettes</object-name>
-    <object-name>direction</object-name>
-    <object-name>profondeurG</object-name>
-    <object-name>profondeurD</object-name>
-    <object-name>ajoutG</object-name>
-    <object-name>ajoutC</object-name>
-    <object-name>ajoutD</object-name>
-    <object-name>moteurs</object-name>
+  
 
-    <object-name>trous</object-name>
-    <object-name>axeA</object-name>
-    <object-name>roueA</object-name>
-    <object-name>axeG</object-name>
-    <object-name>roueG1</object-name>
-    <object-name>roueG2</object-name>
-    <object-name>axeD</object-name>
-    <object-name>roueD1</object-name>
-    <object-name>roueD2</object-name>
-
-    <!-- Objets transparents -->
-    <object-name>vitres</object-name>
-  </animation>
+    
 
   <animation>
     <type>material</type>
@@ -94,6 +60,7 @@
     <object-name>ajoutC</object-name>
     <object-name>ajoutD</object-name>
     <object-name>moteurs</object-name>
+    <object-name>refuel.probe</object-name>
 
     <object-name>trous</object-name>
     <object-name>axeA</object-name>
@@ -108,35 +75,7 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
 
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
-    <specular>
-      <red-prop>specular/red</red-prop>
-      <green-prop>specular/green</green-prop>
-      <blue-prop>specular/blue</blue-prop>
-    </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <animation>
@@ -151,8 +90,21 @@
     <object-name>vitres</object-name>
   </animation>
 
+  
+  
+  <!-- Transparent Surfaces for Rembrandt rendering -->
+   <effect>
+       <inherits-from>Aircraft/Hawker-Siddeley-Nimrod/Models/Effects/glass</inherits-from>
+       <object-name>vitres</object-name>
+   </effect>
+    
   <effect>
-    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+     <inherits-from>Effects/model-transparent</inherits-from>
+      <object-name>vitres</object-name>  
+   </effect>
+   
+   <!-- Solid Surfaces for Rembrandt rendering -->
+  <animation>
     <object-name>fuselage</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
@@ -177,21 +129,48 @@
     <object-name>ajoutC</object-name>
     <object-name>ajoutD</object-name>
     <object-name>moteurs</object-name>
-  </effect>
+    <object-name>refuel.probe</object-name>
 
-  <!-- Une ombre pour OSG
-  <model>
-    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/shadow.xml</path>
-  </model> -->
+    <object-name>trous</object-name>
+    <object-name>axeA</object-name>
+    <object-name>roueA</object-name>
+    <object-name>axeG</object-name>
+    <object-name>roueG1</object-name>
+    <object-name>roueG2</object-name>
+    <object-name>axeD</object-name>
+    <object-name>roueD1</object-name>
+    <object-name>roueD2</object-name>
+  </animation>
+  
+  <!-- Pilot invisible from internally -->
+  <animation>
+    <type>select</type>
+    <object-name>tete</object-name>
+    <object-name>corps</object-name>
+    <object-name>brasG</object-name>
+    <object-name>brasD</object-name>
+    <object-name>avantbrasG</object-name>
+    <object-name>avantbrasD</object-name>
+    <object-name>manche</object-name>
+    <object-name>cuisseG</object-name>
+    <object-name>cuisseD</object-name>
+    <object-name>jambeG</object-name>
+    <object-name>jambed</object-name>
+    <object-name>piedG</object-name>
+    <object-name>piedD</object-name>
+    <condition>
+      <not>
+        <property>sim/current-view/internal</property>
+      </not>
+    </condition>
+  </animation>
+
+  
+ 
 
   <!-- Interieur -->
   <model>
     <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
   <!-- Effets sur le sol -->
@@ -225,54 +204,9 @@
     </offsets>
   </model>
 
-  <!-- Flamme -->
-  <model>
-    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Effects/flammes/flamme.xml</path>
-    <offsets>
-      <x-m>  3.512 </x-m>
-      <y-m> -3.861 </y-m>
-      <z-m> -2.388 </z-m>
-      <roll-deg>     0 </roll-deg>
-      <pitch-deg>    0 </pitch-deg>
-      <heading-deg> -5 </heading-deg>
-    </offsets>
-  </model>
+  
 
-  <model>
-    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Effects/flammes/flamme.xml</path>
-    <offsets>
-      <x-m>  3.669 </x-m>
-      <y-m> -2.850 </y-m>
-      <z-m> -2.388 </z-m>
-      <roll-deg>     0 </roll-deg>
-      <pitch-deg>    0 </pitch-deg>
-      <heading-deg> -5 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Effects/flammes/flamme.xml</path>
-    <offsets>
-      <x-m>  3.512 </x-m>
-      <y-m>  3.861 </y-m>
-      <z-m> -2.388 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 5 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Effects/flammes/flamme.xml</path>
-    <offsets>
-      <x-m>  3.669 </x-m>
-      <y-m>  2.850 </y-m>
-      <z-m> -2.388 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 5 </heading-deg>
-    </offsets>
-  </model>
+ 
 
   <!-- Particules OSG -->
   <model>
@@ -368,7 +302,7 @@
     </offsets>
   </model>
 
-  <!-- Rentré des roues Temporairement disparition/apparition des roues -->
+  <!-- disparition/apparition des roues -->
   <animation>
     <type>select</type>
     <object-name>roueA</object-name>
@@ -739,115 +673,115 @@
     </axis>
   </animation>
 
-  <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
-  <animation>
-    <name>TrainAvant</name>
-    <object-name>axeA</object-name>
-    <object-name>roueA</object-name>
-  </animation>
+  <!-- Lights -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/lightsR/StrobeRed.xml</path>
+    <offsets>
+      <x-m> -4.55 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.50 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/lightsR/StrobeRed.xml</path>
+    <offsets>
+      <x-m>  2.13 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -3.60 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/lightsR/NavLightR.xml</path>
+    <offsets>
+      <x-m>   0.55 </x-m>
+      <y-m> -17.00 </y-m>
+      <z-m>  -1.80 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/lightsR/NavLightR.xml</path>
+    <offsets>
+      <x-m>  0.55 </x-m>
+      <y-m> 17.00 </y-m>
+      <z-m> -1.80 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/lights/StrobeWhite.xml</path>
+    <offsets>
+      <x-m>   1.00 </x-m>
+      <y-m> -17.45 </y-m>
+      <z-m>  -1.80 </z-m>
+   </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/lights/StrobeWhite.xml</path>
+    <offsets>
+      <x-m>  1.00 </x-m>
+      <y-m> 17.45 </y-m>
+      <z-m> -1.80 </z-m>
+    </offsets>
+  </model>
+ 
+  <!-- Landing lights --> 
+ 
+
+  <model>
+    <name>Taxi-Light-Left</name>
+     <path>Aircraft/Hawker-Siddeley-Nimrod/Models/lights/light-cone-l.xml</path>
+    <offsets>
+      <x-m> -5.92 </x-m>
+      <y-m> -4.60 </y-m>
+      <z-m> -2.50 </z-m>
+      <pitch-deg>  -10 </pitch-deg>
+      <heading-deg> 10 </heading-deg>
+    </offsets>
+  </model>
+
+   <model>
+    <name>Taxi-Light-Right</name>
+    
+	<path>Aircraft/Hawker-Siddeley-Nimrod/Models/lights/light-cone-r.xml</path>
+    <offsets>
+      <x-m> -5.92 </x-m>
+      <y-m>  4.60 </y-m>
+      <z-m> -2.50 </z-m>
+      <pitch-deg>   -10 </pitch-deg>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Taxi-Light-Centre</name>
+    <!-- <path>Aircraft/Hawker-Siddeley-Nimrod/Models/lightsR/LandingLight.xml</path>-->
+	 <path>Aircraft/Hawker-Siddeley-Nimrod/Models/lights/light-cone-n.xml</path>
+    <offsets>
+      <x-m> -19.5 </x-m>
+      <y-m>   0.0 </y-m>
+      <z-m>  -3.2 </z-m>
+    </offsets>
+  </model>
 
   <animation>
-    <type>rotate</type>
-    <object-name>TrainAvant</object-name>
-    <property>surface-positions/rudder-pos-norm</property>
-    <factor> 20 </factor>
-    <center>
-      <x-m> -15.733 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>  -4.057 </z-m>
-    </center>
-    <axis>
-      <x>  0 </x>
-      <y>  0 </y>
-      <z> -1 </z>
-    </axis>
+    <type>select</type>
+    <object-name>Taxi-Light-Left</object-name>
+    <object-name>Taxi-Light-Centre</object-name>
+    <object-name>Taxi-Light-Right</object-name>
+    <condition>
+      <equals>
+        <property>controls/switches/landing-light</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
   </animation>
 
-  <!-- Rotation des roues lors du roulage -->
-  <animation>
-    <type>spin</type>
-    <object-name>roueA</object-name>
-    <property>/gear/gear[0]/rollspeed-ms</property>
-    <factor> 30 </factor>
-    <center>
-      <x-m> -15.733 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>  -4.057 </z-m>
-    </center>
-    <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>spin</type>
-    <object-name>roueG1</object-name>
-    <property>gear/gear[1]/rollspeed-ms</property>
-    <factor> 30 </factor>
-    <center>
-      <x-m> -1.864 </x-m>
-      <y-m> -4.345 </y-m>
-      <z-m> -4.061 </z-m>
-    </center>
-    <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>spin</type>
-    <object-name>roueG2</object-name>
-    <property>gear/gear[1]/rollspeed-ms</property>
-    <factor> 30 </factor>
-    <center>
-      <x-m> -0.684 </x-m>
-      <y-m> -4.345 </y-m>
-      <z-m> -4.061 </z-m>
-    </center>
-    <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>spin</type>
-    <object-name>roueD1</object-name>
-    <property>gear/gear[2]/rollspeed-ms</property>
-    <factor> 30 </factor>
-    <center>
-      <x-m> -1.864 </x-m>
-      <y-m>  4.345 </y-m>
-      <z-m> -4.061 </z-m>
-    </center>
-    <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>spin</type>
-    <object-name>roueD2</object-name>
-    <property>gear/gear[2]/rollspeed-ms</property>
-    <factor> 30 </factor>
-    <center>
-      <x-m> -0.684 </x-m>
-      <y-m>  4.345 </y-m>
-      <z-m> -4.061 </z-m>
-    </center>
-    <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
-
+  
+ 
+  
 </PropertyList>
 

@@ -14,6 +14,8 @@
         <greater-than>
           <property>/engines/engine[0]/n2</property>
           <value>75</value>
+		   <property>velocities/airspeed-kt</property>
+     <value>100</value>
         </greater-than>
         <less-than>
           <property>/position/altitude-ft</property>

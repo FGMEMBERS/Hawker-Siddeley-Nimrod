@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+  
+  <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>10</max-m>
+    </animation>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>planchet</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+  <name>pilot</name>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -16.659 </x-m>
+      <y-m>  -0.426 </y-m>
+      <z-m>  -1.144 </z-m>
+    </offsets>
+  </model>
+  
+   <model>
+   <name>co-pilot</name>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Pilot/pilotOLD.xml</path>
+    <offsets>
+      <x-m> -16.659 </x-m>
+      <y-m>  0.426 </y-m>
+      <z-m>  -1.144 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/Hawker-Siddeley-Nimrod/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -17.316 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -1.031 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

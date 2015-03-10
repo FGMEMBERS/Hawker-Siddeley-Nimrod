@@ -15,10 +15,12 @@
         <greater-than>
           <property>/engines/engine[0]/n2</property>
           <value>50</value>
+		   <property>velocities/airspeed-kt</property>
+     <value>100</value>
         </greater-than>
         <greater-than>
           <property>/position/altitude-ft</property>
-          <value>3000</value>
+          <value>23000</value>
         </greater-than>
       </and>
     </condition>
